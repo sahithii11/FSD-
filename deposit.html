@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Bank Denomination</title>
+</head>
+<body>
+<script>
+let amount = parseInt(prompt("Enter the deposited amount:"));
+let hundred = Math.floor(amount / 100);
+amount = amount % 100;
+let fifty = Math.floor(amount / 50);
+amount = amount % 50;
+let twenty = Math.floor(amount / 20);
+amount = amount % 20;
+let ten = Math.floor(amount / 10);
+amount = amount % 10;
+let five = Math.floor(amount / 5);
+amount = amount % 5;
+let two = Math.floor(amount / 2);
+amount = amount % 2;
+let one = amount;
+document.write("Denominations:<br>");
+if(hundred>0) document.write(hundred + " - 100's<br>");
+if(fifty>0) document.write(fifty + " - 50's<br>");
+if(twenty>0) document.write(twenty + " - 20's<br>");
+if(ten>0) document.write(ten + " - 10's<br>");
+if(five>0) document.write(five + " - 5's<br>");
+if(two>0) document.write(two + " - 2's<br>");
+if(one>0) document.write(one + " - 1's<br>");
+</script>
+</body>
+</html>
