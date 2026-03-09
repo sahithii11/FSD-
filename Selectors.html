@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Selector Forms</title>
+    <style>
+        p { color: blue; }
+        #mainHeading { color: red; text-align: center; }
+        .highlight { background-color: yellow; }
+        h2, h3 { color: green; }
+        * { font-family: Arial; }
+        div p { font-style: italic; }
+        ul > li { color: brown; }
+        h2 + p { color: purple; }
+        h3 ~ p { background-color: lightgray; }
+        a:hover { color: red; }
+        li:first-child { font-weight: bold; }
+        p::first-letter { font-size: 20px; color: orange; }
+        input[type="text"] { border: 2px solid blue; }
+    </style>
+</head>
+<body>
+<h1 id="mainHeading">CSS Selector Types</h1>
+<h2>Simple</h2>
+<p>Element</p>
+<p class="highlight">Class</p>
+<h2>Combinatory</h2>
+<div><p>Descendant</p></div>
+<ul><li>Child</li></ul>
+<h2>Adjacent</h2>
+<p>Sibling</p>
+<h3>General</h3>
+<p>Sibling 1</p>
+<p>Sibling 2</p>
+<h2>Pseudo</h2>
+<a href="#">Hover</a>
+<h2>Attribute</h2>
+<input type="text" placeholder="Text">
+</body>
+</html>
