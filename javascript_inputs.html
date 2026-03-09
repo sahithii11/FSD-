@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Input Methods</title>
+    <script>
+        function getInput() {
+            let name = prompt("Enter your name:");
+            document.getElementById("promptOutput").innerHTML = "Name entered using prompt(): " + name;
+            let age = document.getElementById("age").value;
+            document.getElementById("inputOutput").innerHTML = "Age entered using input field: " + age;
+            let response = confirm("Do you like JavaScript?");
+            document.getElementById("confirmOutput").innerHTML = "Response using confirm(): " + response;
+        }
+    </script>
+</head>
+<body>
+    <h2>Different Ways to Take Input in JavaScript</h2>
+    Enter your age:
+    <input type="text" id="age">
+    <br><br>
+    <button onclick="getInput()">Click to Provide Inputs</button>
+    <p id="promptOutput"></p>
+    <p id="inputOutput"></p>
+    <p id="confirmOutput"></p>
+</body>
+</html>
