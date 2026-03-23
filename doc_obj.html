@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document Object Example</title>
+</head>
+<body>
+<h2 id="heading">Hello World</h2>
+<p>This is a paragraph.</p>
+<button onclick="changeContent()">Click Me</button>
+<script>
+function changeContent() {
+    document.title = "Updated Title";
+    document.getElementById("heading").innerHTML = "Welcome to JavaScript";
+    document.body.style.backgroundColor = "lightblue";
+    document.write("<h3>Content changed using document.write()</h3>");
+}
+</script>
+</body>
+</html>

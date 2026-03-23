@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Math Object Example</title>
+</head>
+<body>
+<h2>Math Object Demo</h2>
+<button onclick="calculate()">Calculate</button>
+<p id="result"></p>
+<script>
+function calculate() {
+    let num = 25.6;
+    let output = "";
+    output += "Value of PI: " + Math.PI + "<br>";
+    output += "Square Root of " + num + ": " + Math.sqrt(num) + "<br>";
+    output += "Rounded value: " + Math.round(num) + "<br>";
+    output += "Ceil value: " + Math.ceil(num) + "<br>";
+    output += "Floor value: " + Math.floor(num) + "<br>";
+    output += "Random number: " + Math.random() + "<br>";
+    output += "Power (2^3): " + Math.pow(2,3) + "<br>";
+    document.getElementById("result").innerHTML = output;
+}
+</script>
+</body>
+</html>

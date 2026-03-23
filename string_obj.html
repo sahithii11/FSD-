@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>String Object Example</title>
+</head>
+<body>
+<h2>String Object Demo</h2>
+<input type="text" id="text" placeholder="Enter a string">
+<button onclick="processString()">Process</button>
+<p id="result"></p>
+<script>
+function processString() {
+    let str = document.getElementById("text").value;
+    let output = "";
+    output += "Length: " + str.length + "<br>";
+    output += "Uppercase: " + str.toUpperCase() + "<br>";
+    output += "Lowercase: " + str.toLowerCase() + "<br>";
+    output += "Character at position 2: " + str.charAt(2) + "<br>";
+    output += "Substring (0-4): " + str.substring(0, 4) + "<br>";
+    output += "Index of 'a': " + str.indexOf('a') + "<br>";
+    document.getElementById("result").innerHTML = output;
+}
+</script>
+</body>
+</html>

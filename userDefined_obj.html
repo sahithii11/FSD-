@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Defined Object Example</title>
+</head>
+<body>
+<h2>User Defined Object Demo</h2>
+<button onclick="showDetails()">Show Details</button>
+<p id="output"></p>
+<script>
+function Student(name, age, marks) {
+    this.name = name;
+    this.age = age;
+    this.marks = marks;
+    this.getDetails = function() {
+        return "Name: " + this.name + ", Age: " + this.age;
+    };
+}
+Object.defineProperty(Student.prototype, "grade", {
+    get: function() {
+        if (this.marks >= 90) return "A";
+        else if (this.marks >= 75) return "B";
+        else return "C";
+    },
+    set: function(value) {
+        this.marks = value;
+    }
+});
+let s1 = new Student("Sahithi", 20, 85);
+function showDetails() {
+    document.getElementById("output").innerHTML =
+        s1.getDetails() + "<br>" +
+        "Marks: " + s1.marks + "<br>" +
+        "Grade: " + s1.grade;
+}
+</script>
+</body>
+</html>

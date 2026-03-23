@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Date Object Example</title>
+</head>
+<body>
+<h2>Date Object Demo</h2>
+<button onclick="showDate()">Show Date Details</button>
+<p id="result"></p>
+<script>
+function showDate() {
+    let today = new Date();
+    let date = today.getDate();
+    let month = today.getMonth() + 1; // Months start from 0
+    let year = today.getFullYear();
+    let day = today.getDay();
+    let hours = today.getHours();
+    let minutes = today.getMinutes();
+    let seconds = today.getSeconds();
+    document.getElementById("result").innerHTML =
+        "Date: " + date + "/" + month + "/" + year + "<br>" +
+        "Day: " + day + "<br>" +
+        "Time: " + hours + ":" + minutes + ":" + seconds;
+}
+</script>
+</body>
+</html>

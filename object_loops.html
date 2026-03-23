@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Object Loop Example</title>
+</head>
+<body>
+
+<script>
+const student = {
+    name: "Sahithi",
+    age: 20,
+    course: "CSE",
+    city: "Guntur"
+};
+
+// 1. Using for-in loop (used directly with objects)
+document.write("<h3>Using for-in loop:</h3>");
+for (let key in student) {
+    document.write(key + " : " + student[key] + "<br>");
+}
+
+// 2. Using for-of loop (used with Object.entries)
+document.write("<h3>Using for-of loop:</h3>");
+for (let [key, value] of Object.entries(student)) {
+    document.write(key + " : " + value + "<br>");
+}
+
+// 3. Using forEach loop
+document.write("<h3>Using forEach loop:</h3>");
+Object.entries(student).forEach(function([key, value]) {
+    document.write(key + " : " + value + "<br>");
+});
+</script>
+
+</body>
+</html>
